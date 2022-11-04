@@ -1,0 +1,409 @@
+*{
+  margin:0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body{
+  color:#fff;
+  background-color:#AF7AB3;
+  font-family: "Space Grotesk";
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:"Butler";
+}
+
+h1{
+  font-size: 70px;
+}
+h2{
+  font-size: 36px;
+}
+h3{
+  font-size: 26px;
+}
+
+.container{
+  max-width:1166px;
+  margin: 0 auto;
+}
+
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+header ul{
+  padding-left: 0;
+}
+
+header ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header ul li a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.banner{
+  height:100vh;
+  background: url("https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner .text{
+  text-align:center;
+  padding-bottom: 100px;
+}
+
+.banner .h1{
+  line-height: 80px;
+  font-weight: 300;
+  margin-bottom:10px;
+}
+
+/* Global Button style */
+.btn{
+  position:relative;
+  display: inline-block;
+  width: 250px;
+  height: 60px;
+  background-color: #fff;
+  color: #3F3B6C;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  z-index: 9;
+  margin-top: 50px;
+  transition: all ease 0.5s;
+}
+
+.btn:before{
+  content:'';
+  position:absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  opacity: .9;
+  z-index: -1;
+  transition: all ease 0.5s;
+}
+
+.btn:hover{
+  color:#fff;
+}
+
+.btn:hover:before{
+  top:0;
+  height:100%;
+
+}
+
+.brand-logo{
+  padding: 30px 0;
+}
+
+.brand-logo-inner{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec1{
+  position:relative;
+  padding:80px 0;
+}
+.sec1 h3{
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.sec1 p{
+  line-height: 32px;
+}
+.sec1-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sec1 .text{
+  width:47%;
+}
+
+.sec1 .text-left{
+  text-align: right;
+}
+.sec1 .text-right{
+  text-align: left;
+}
+.sec1:before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left,transparent,#fff,transparent);
+}
+.sec1:after{
+  content:'';
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left,transparent,#fff,transparent);
+}
+.sec2{
+  padding: 100px 0 0;
+
+}
+.sec2 h2{
+  text-transform: uppercase;
+}
+.sec2 p{
+  line-height:30px;
+}
+.sec2-inner{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.sec2-inner .img{
+  width: auto;
+}
+
+.sec2-inner .text{
+  width:50%;
+  margin-left: -65px;
+  z-index: 9;
+}
+
+.sec2 .text-inner{
+  position:relative;
+  margin:55px 0 0 190px;
+}
+.sec2 .text-inner:before{
+  content:'';
+  position:absolute;
+  top:8px;
+  left:-30px;
+  width:1px;
+  height:100%;
+  background: linear-gradient(to top, transparent,#fff);
+}
+.left-right-sec:nth-child(even) .text{
+  margin-right: -65px;
+  text-align: right;
+}
+.left-right-sec:nth-child(even) .text-inner{
+  margin:55px 190px 0 0;
+}
+.left-right-sec:nth-child(even) .text-inner:before{
+  left:inherit;
+  right:-30px;
+}
+
+.sec4{
+  padding: 100px 0;
+}
+.sec4 h2{
+  text-transform: uppercase;
+}
+.sec4-boxes{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+.box{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:23%;
+  min-height:270px;
+  border:1px solid #fff;
+  margin-bottom:40px;
+  overflow:hidden;
+  /* background-color: #D58BDD; */
+}
+.box h6{
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.sec4-boxes .img{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  opacity: 0;
+  transition: all ease 1s;
+}
+
+.box:hover .img{
+  opacity: 1;
+}
+
+footer{
+  position:relative;
+  padding: 50px 0;
+  background-color: #7F5283;
+}
+
+.footer-inner{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.footer-inner .col{
+  padding-right: 50px;
+}
+footer ul{
+  margin-left:0;
+}
+footer ul li{
+  list-style: none;
+  margin-bottom: 30px;
+}
+footer ul li a{
+  text-decoration: none;
+  color:#fff;
+  font-size:14px;
+}
+
+footer:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:1px;
+  background: linear-gradient(to left,transparent,#fff,transparent);
+}
+footer:after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:1px;
+  background: linear-gradient(to left,transparent,#fff,transparent);
+}
+
+.copyright{
+  padding:25px 0;
+  text-align: center;
+}
+.copyright p{
+  font-size:14px;
+}
+
+
+/* For charity css */
+/* .cont{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background: black;
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.card-img{
+  background-color: white;
+  height: 170px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card h2{
+  padding: 10px;
+}
+
+.card p{
+  padding: 10px;
+}
+
+.card a{
+  background-color: white;
+  color: black;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 3px 50px;
+  text-decoration: none;
+}
+
+.card:hover{
+  background-color: pink;
+  color:white;
+  cursor:pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+} */
+
+/* Style The Dropdown Button */
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #000}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* For displaying each charity post pages */
+
+.charityPost{
+  text-align: center;
+}
