@@ -34,8 +34,21 @@ router.get('/fundPost', function (req, res) {
   res.render('fundPost');
 });
 
+
 router.get('/donate', function (req, res) {
   res.render('donate');
+});
+
+router.get('/addCharity', function (req, res) {
+  res.render('addCharity');
+});
+
+router.get('/addShop', function (req, res) {
+  res.render('addShop');
+});
+
+router.get('/needFund', function (req, res) {
+  res.render('needFund');
 });
 
 

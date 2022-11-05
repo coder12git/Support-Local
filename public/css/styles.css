@@ -426,3 +426,36 @@ footer:after{
 .button {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+.button1{
+  background-color: #8D9EFF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* margin: 100px  200px; */
+  text-align:center;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  display:grid;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button1:hover{
+  background-color:#6C4AB6;
+  color: white;
+
+}
+
+
+
+.for{
+  display: inline;
+}
