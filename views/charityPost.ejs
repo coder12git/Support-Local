@@ -1,18 +1,161 @@
-<%- include("partials/header") -%>
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
 
 
-<section class="banner" style="background:url(images/charity.jpg) no-repeat;">
-</section>
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
 
-<div class="charityPost">
-  <h1>LOREM IPSUM</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”
-  </p>
-  <h3>Address</h3>
-  <h5>Contact</h5>
-</div>
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+<!-- .footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+} -->
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">SUPPORT LOCAL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CHARITIES
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/charity">POSTS</a>
+          <a class="dropdown-item" href="#">ADD CHARITY</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/volunteer">VOLUNTEER</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          FUNDRAISING
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/fund">POSTS</a>
+          <a class="dropdown-item" href="#">FUNDRAISERS</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          SHOP SMALL
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/shop">POSTS</a>
+          <a class="dropdown-item" href="#">ADD SHOPS</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63652802fd11e0f4"></script>
-<%- include("partials/footer") -%>
+<body>
+  <div class="header">
+    <h2 style="color:black">NAME</h2>
+  </div>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <div class="fakeimg" style="height:200px;">
+          <img src="images/postChar.png" alt="" />
+        </div>
+        <p style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2 style="color:black">ADDRESS</h2>
+        <p style="color:black">Some text about me in culpa qui officia deserunt mollit anim..</p>
+      </div>
+      <div class="card">
+        <h3 style="color:black">CONTACT</h3>
+        <p style="color:black">Some text..</p>
+        <a href="/donate">
+          <button class="button" >DONATE</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63652802fd11e0f4"></script>
+
+
+  <%- include("partials/footer") -%>

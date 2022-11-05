@@ -26,4 +26,17 @@ router.get('/charityPost', function (req, res) {
   res.render('charityPost');
 });
 
+router.get('/shopPost', function (req, res) {
+  res.render('shopPost');
+});
+
+router.get('/fundPost', function (req, res) {
+  res.render('fundPost');
+});
+
+router.get('/donate', function (req, res) {
+  res.render('donate');
+});
+
+
 export default router;

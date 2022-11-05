@@ -402,8 +402,27 @@ footer:after{
   display: block;
 }
 
-/* For displaying each charity post pages */
-
-.charityPost{
+/* For donation */
+.button{
+  background-color: #38E54D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color:#4CAF50 ; /* Green */
+  color: white;
+}
+
+.button {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
