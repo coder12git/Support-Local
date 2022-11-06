@@ -1,4 +1,5 @@
 import express, { Router } from 'express';
+import * as viewsController from '../controllers/views/viewsController';
 
 const router: Router = express.Router();
 
@@ -22,9 +23,7 @@ router.get('/shop', function (req, res) {
   res.render('shop');
 });
 
-router.get('/charityPost', function (req, res) {
-  res.render('charityPost');
-});
+router.get('/charity/:charityId', viewsController.getOneCharity);
 
 router.get('/shopPost', function (req, res) {
   res.render('shopPost');
@@ -33,7 +32,6 @@ router.get('/shopPost', function (req, res) {
 router.get('/fundPost', function (req, res) {
   res.render('fundPost');
 });
-
 
 router.get('/donate', function (req, res) {
   res.render('donate');
@@ -50,6 +48,5 @@ router.get('/addShop', function (req, res) {
 router.get('/needFund', function (req, res) {
   res.render('needFund');
 });
-
 
 export default router;

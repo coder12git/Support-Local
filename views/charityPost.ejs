@@ -72,7 +72,7 @@ body {
 }
 </style>
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
 
 </head>
 
@@ -123,27 +123,31 @@ body {
 </nav>
 
   <div class="header">
-    <h2 style="color:black">NAME</h2>
+    <h2 style="color:black">
+      <%- charity.name %> 
+    </h2>
   </div>
+
+  <a href="https://rzp.io/l/IDbHSiW">Donate</a>
 
   <div class="row">
     <div class="leftcolumn">
       <div class="card">
         <div class="fakeimg" style="height:200px;">
           <img src="images/site/postChar.png" alt="" />
+          <img src="http://localhost:8000/images/resources/charity/<%- charity.coverImage %>" alt="<%- charity.name %>">
         </div>
-        <p style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p style="color:black"><%- charity.description %></p>
       </div>
     </div>
     <div class="rightcolumn">
       <div class="card">
         <h2 style="color:black">ADDRESS</h2>
-        <p style="color:black">Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <p style="color:black"><%- charity.address %></p>
       </div>
       <div class="card">
         <h3 style="color:black">CONTACT</h3>
-        <p style="color:black">Some text..</p>
+        <p style="color:black"><%- charity.contact %></p>
         <a href="/donate">
           <button class="button" >DONATE</button>
         </a>

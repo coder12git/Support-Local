@@ -4,20 +4,30 @@
   "description": "",
   "scripts": {
     "dev": "nodemon --exec ts-node-dev --respawn server.ts",
-    "build": "tsc"
+    "prod": "SET NODE_ENV=production&&nodemon --exec ts-node-dev --respawn server.ts",
+    "build": "tsc",
+    "serve": "npm run build && node ./dist/server.js"
   },
   "author": "Arun Bohra",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
     "ejs": "^3.1.8",
-    "morgan": "^1.10.0"
+    "express": "^4.18.2",
+    "mongoose": "^6.7.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "razorpay": "^2.8.3",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
     "@types/morgan": "^1.9.3",
+    "@types/multer": "^1.4.7",
     "@types/node": "^16.18.3",
+    "@types/uuid": "^8.3.4",
     "nodemon": "^2.0.20",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.4"
