@@ -136,7 +136,7 @@
       formData.append('address', address);
       formData.append('contact', contact.split(','));
 
-      fetch('http://localhost:8000/charity', {
+      fetch('/charity', {
         method: 'post',
         body: formData,
       }).then(res => {
@@ -146,7 +146,7 @@
 
         return res.json();
       }).then(res => {
-        window.location.href = `http://localhost:8000/charity/${res.data._id}`;
+        window.location.href = `/charity/${res.data._id}`;
       }).catch(err => {
         console.error(err);
       })

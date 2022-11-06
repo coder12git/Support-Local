@@ -7,6 +7,7 @@ import Charity from '../../models/charity/charityModel';
 import AppError from '../../utils/appError';
 import catchAsync from '../../utils/catchAsync';
 
+
 interface ICharity {
   name: string;
   createdBy: string;
