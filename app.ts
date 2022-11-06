@@ -38,6 +38,10 @@ app.use('/charity', charityRouter);
 app.use('/fund-raiser', fundRaiserRouter);
 app.use('/', viewsRouter);
 
+app.get('/charityPost',function(req,res){
+  res.render("charityPost");
+});
+
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });

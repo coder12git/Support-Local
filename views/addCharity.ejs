@@ -69,37 +69,38 @@
   </div>
 </nav>
 
-<form action="/addCharity" method="post" class="for">
+<!-- <form action="https://localhost:8000/charity" method="post" class="for"> -->
+  <div class="for">
+    <div class="form-group fm">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Charity name</label>
+        <input type="text" class="form-control" id="charityName">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="creatorEmail">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">About</label>
+        <textarea class="form-control" id="aboutCharity" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Address</label>
+        <input type="text" class="form-control" id="aboutAddress">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Contact details</label>
+        <input type="text" class="form-control" id="contact">
+      </div>
 
-  <div class="form-group fm">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Charity name</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">About</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Contact details</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1">
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Image</label>
+        <input class="form-control" type="file" id="charityImage">
+      </div>
     </div>
 
-    <div class="mb-3">
-      <label for="formFile" class="form-label">Image</label>
-      <input class="form-control" type="file" id="formFile">
-    </div>
-
-
+    <button type="submit" id="publish" class="button1 button1-primary " >Publish</button>
   </div>
-
-  <button type="submit"  class="button1 button1-primary " >Publish</button>
-
-</form>
 
 
 
@@ -108,6 +109,49 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63652802fd11e0f4"></script> -->
+  <script >
+
+    const button = document.getElementById("publish");
+    button.addEventListener("click",(e)=>{
+      e.preventDefault();
+      const name = document.querySelector("#charityName").value;
+      const about = document.querySelector("#aboutCharity").value;
+      const address = document.querySelector("#aboutAddress").value;
+      const contact = document.querySelector("#contact").value;
+      const email = document.querySelector("#creatorEmail").value;
+
+      if (!name || !about || !address || !contact || !email) {
+        return alert('Please provide all of the details');
+      }
+
+      const fileInput = document.querySelector("#charityImage");
+      if (!fileInput.files.length) return alert('error', 'Please select a file.');
+
+      const formData = new FormData();
+
+      formData.append('coverImage', fileInput.files[0]);
+      formData.append('name', name);
+      formData.append('description', about);
+      formData.append('createdBy', email);
+      formData.append('address', address);
+      formData.append('contact', contact.split(','));
+
+      fetch('http://localhost:8000/charity', {
+        method: 'post',
+        body: formData,
+      }).then(res => {
+        if (!res.ok) {
+          throw new Error('Something went wrong');
+        }
+
+        return res.json();
+      }).then(res => {
+        window.location.href = `http://localhost:8000/charity/${res.data._id}`;
+      }).catch(err => {
+        console.error(err);
+      })
+    });
+  </script>
 
 
   <%- include("partials/footer") -%>
