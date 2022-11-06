@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 dotenv.config({ path: './config.env' });
-mongoose.connect("mongodb+srv://ruchi:Kumari123@cluster0.kdsaye1.mongodb.net/supportDB");
+mongoose.connect(process.env.DB_URI!);
 
 import app from './app';
 
