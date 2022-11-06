@@ -57,13 +57,13 @@ For frontend, we had used HTML, CSS, Bootstrap and JavaScript. For backend, the 
 
 We were able to complete the idea behind the challenge and create a hack to solve the problems for local groups and small businesses. Team Work was something we were really proud of especially when we had errors we worked together to fix them.
 
-## What we learnt 📚
+## What we learnt? 📚
 
 Teamwork makes the dream work!
 
 ## What's next for Support Local?
 
-Building a complete full stack web application and help the user to experience the best out of it.
+Building a complete full-stack web application and helping the user to experience the best out of it.
 
 ## Team Members:
 <a href="https://github.com/coder12git/Support-Local/graphs/contributors">
