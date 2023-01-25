@@ -1,8 +1,28 @@
-# Support Local
+
+
+
+  
+  
+  
+  
+  <a id="about"> </a>
+
+# Support Local 🌟
+
+
+
 
 This project is submitted for [MLH - Neighborhood Hacks 2 2022 Hackathon](https://neighborhood-hacks-2.devpost.com/)
 
-Devpost Link of project - [Support Local](https://devpost.com/software/support-local-i2uz6b)
+
+
+- Devpost Link of project - [Support Local](https://devpost.com/software/support-local-i2uz6b)
+
+
+
+- [Project Demo](https://youtu.be/MtL7ERfRdGw)
+
+
 
 
 
@@ -16,9 +36,11 @@ Devpost Link of project - [Support Local](https://devpost.com/software/support-l
 
 The Idea behind **Support Local** is to build a hassle-free web application which will **help local charities**,**small shops** and **local peoples who need funds**.
 
----
 
-# Technology Stack Used:
+
+
+
+## Technology Stack Used:
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
 <a href="#" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="css3" width="40" height="40"/> </a>
