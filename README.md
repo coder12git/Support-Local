@@ -2,6 +2,8 @@
 
 This project is submitted for [MLH - Neighborhood Hacks 2 2022 Hackathon](https://neighborhood-hacks-2.devpost.com/)
 
+Devpost Link of project - [Support Local](https://devpost.com/software/support-local-i2uz6b)
+
 ---
 
 The Idea behind **Support Local** is to build a hassle-free web application which will **help local charities**,**small shops** and **local peoples who need funds**.
